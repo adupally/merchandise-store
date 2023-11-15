@@ -1,0 +1,26 @@
+<div class="header d-flex align-items-center">
+    <a routerLink="/Home"><img src="../../../assets/bookmart-logo.avif" alt="bookmart-logo" class="main-logo"></a>
+    <form #searchBox="ngForm">
+        <div class="header-search ms-3 d-flex align-items-center">
+            <input type="text" name="search" class="search-box" placeholder="Search for Books" [(ngModel)]="searchText">
+        </div>
+
+    </form>
+    <button class="btn-theme ms-4">Sort</button>
+    <div class="dropdwn-container">
+        <div class="dropdown-list row w-250">
+            <span class="dropdown-list-item">
+                {{criteria}}
+            </span>
+        </div>
+    </div>
+    <div class="head-right-item">
+        <div class="cart" routerLink="cart">
+            <img src="../../../assets/trolley.png" alt="" class="cart-image">
+            @if(cartItemCount){
+            <div class="cart-items">{{cartItemCount}}</div>
+            }
+
+        </div>
+    </div>
+</div>

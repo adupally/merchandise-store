@@ -1,0 +1,47 @@
+
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between; 
+    margin-left: 10px; /* Negative margin to counteract margin on book-card */
+}
+
+.book-card {
+    width:360px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    background-color: rgb(101, 64, 64);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    box-shadow: 5px 5px 20px grey;
+}
+
+.book-thumbnail {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 260px;
+    height: 335px;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4, p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-theme {
+    background-color: red;
+    border-color: red;
+    outline: none;
+}
