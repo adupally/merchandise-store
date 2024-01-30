@@ -2,7 +2,14 @@
 @for (book of this.books1.books; track book.id;let index = $index){
 <div class="book-card p-1 d-flex flex-column jusity-content-between" >  
     <div class="d-flex justify-content-center" >
+        @if(book.thumbnailUrl == 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/kaeppler.jpg'){
+            <a routerLink="product-details"><img class="book-thumbnail" [src]=""></a>
+        }
+        @else if(book.thumbnailUrl == 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/nielsonaw.jpg'){
+            <a routerLink="product-details"><img class="book-thumbnail" [src]=""></a>
+        }@else{
         <a routerLink="product-details"><img class="book-thumbnail" [src]="book.thumbnailUrl"></a>
+        }
     </div>
     <div class="card-content">
         <h4 class="text-truncate">{{book.title}}</h4>

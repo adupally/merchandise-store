@@ -20,9 +20,17 @@ export class ProductsComponent implements OnInit {
     this.bookservice.getAllBooks().subscribe(
       (res) => {
         this.books1 = res;
+        console.log("Calling getall books")
         this.isProductInCart = Array(this.books1.books.length).fill(false);
-      }
-    );
+      });
+      
+      this.bookservice.sortSubject.subscribe((sortCriterion:any)=>{
+        console.log("calling sortbooks");
+        this.books1 = this.bookservice.sortBooks(sortCriterion);
+      });
+      
+      
+      
   }
 
   addToCart(book: any, index: number) {

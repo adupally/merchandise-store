@@ -6,14 +6,19 @@
         </div>
 
     </form>
-    <button class="btn-theme ms-4">Sort</button>
+    <button class="btn-theme ms-4" (click)="showSortMenu()">Sort</button>
+    @if (isSortMenuVisible) {
     <div class="dropdwn-container">
+       
         <div class="dropdown-list row w-250">
-            <span class="dropdown-list-item">
-                {{criteria}}
+            @for (criterion of criteria; track $index) {
+            <span class="dropdown-list-item" (click)="sortBooks(criterion)">
+                {{criterion}}
             </span>
+        }
         </div>
     </div>
+}
     <div class="head-right-item">
         <div class="cart" routerLink="cart">
             <img src="../../../assets/trolley.png" alt="" class="cart-image">

@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 import { CartService } from '../../core/cart.service';
 import { CartItemComponent } from "../cart-item/cart-item.component";
 import { PriceDetailsComponent } from '../price-details/price-details.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
     selector: 'app-cart',
     standalone: true,
     templateUrl: './cart.component.html',
     styleUrl: './cart.component.css',
-    imports: [CommonModule, RouterModule, CartItemComponent,PriceDetailsComponent]
+    imports: [CommonModule, RouterModule, CartItemComponent,PriceDetailsComponent, HeaderComponent]
 })
 export class CartComponent implements OnInit {
   cartItems:any[]=[];

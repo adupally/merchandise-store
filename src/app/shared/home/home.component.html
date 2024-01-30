@@ -1,9 +1,22 @@
-<div class="d-flex">
-    <app-side-nav />
+<!-- <div class="d-flex">
+    <app-header class="header"></app-header>
+    <app-side-nav class="sideNav"/>
     <div class="home-main row">
-        <!-- @for (book of books; track book.id){ -->
-        <app-products class="col-4"></app-products>
-        <!-- } -->
+        
+        <app-products class="col-4 products"></app-products>
+        
     </div>
 
+</div> -->
+
+<div class="d-flex flex-column" style="height: 100vh;">
+    <app-header class="header"></app-header>
+    <div class="d-flex flex-grow-1">
+        <app-side-nav class="sideNav"></app-side-nav>
+        <div class="home-main d-flex flex-grow-1">
+                <!-- Your book cards here -->
+                <app-products class="col-4"></app-products>
+        </div>
+    </div>
 </div>
+
